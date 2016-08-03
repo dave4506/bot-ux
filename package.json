@@ -1,0 +1,19 @@
+{
+  "name": "bot-ux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dave4506/bot-ux.git"
+  },
+  "author": "David Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dave4506/bot-ux/issues"
+  },
+  "homepage": "https://github.com/dave4506/bot-ux#readme"
+}

@@ -28,7 +28,7 @@ var verify = function verify(pass) {
   };
 };
 
-var webhook = function webhook(reducer) {
+var message = function message(reducer) {
   return function (req, res) {
     var messaging_events = req.body.entry[0].messaging;
     var messageGroups = (0, _collection.groupBy)(messaging_events, function (m) {
@@ -49,4 +49,4 @@ var webhook = function webhook(reducer) {
   };
 };
 
-exports.default = { webhook: webhook, verify: verify, timeLog: timeLog };
+exports.default = { message: message, verify: verify, timeLog: timeLog };

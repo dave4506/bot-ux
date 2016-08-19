@@ -16,7 +16,7 @@ const verify = (pass) => {
   }
 }
 
-const webhook = (reducer) => {
+const message = (reducer) => {
   return (req,res)=>{
     let messaging_events = req.body.entry[0].messaging
     const messageGroups = groupBy(messaging_events,(m)=>{return m.sender.id})
@@ -36,4 +36,4 @@ const webhook = (reducer) => {
   }
 }
 
-export default {webhook,verify,timeLog}
+export default {message,verify,timeLog}

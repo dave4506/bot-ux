@@ -23,4 +23,11 @@ Execute Action: After finding the correct action, execute the action and return 
 
 New UserState: the updated userState should have all the neccesary information to help generate the next message to send to the user.
 
-New Message: With the new userState, generate a new message in response to this new userState, here you can make API calls, and really any async actions. 
+New Message: With the new userState, generate a new message in response to this new userState, here you can make API calls, and really any async actions to help create the write message.
+
+
+ ##TODO
+ -Finish README.md
+ -Add Yeoman generator
+ -add examples
+ -add unit tests

@@ -20,6 +20,14 @@ var _actions = require('./webhook/facebook/actions');
 
 var _actions2 = _interopRequireDefault(_actions);
 
+var _mainflow = require('./reducer/mainflow');
+
+var _mainflow2 = _interopRequireDefault(_mainflow);
+
+var _defaultStateReducer = require('./reducer/defaultStateReducer');
+
+var _defaultStateReducer2 = _interopRequireDefault(_defaultStateReducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = { delper: delper, messageCreator: _facebook2.default, webhook: _index2.default, actions: _actions2.default };
+exports.default = { helper: _helper2.default, messageCreator: _facebook2.default, webhook: _index2.default, actions: _actions2.default, mainflow: _mainflow2.default, defaultStateReducer: _defaultStateReducer2.default };

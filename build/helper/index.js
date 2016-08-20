@@ -22,10 +22,10 @@ var determineMessage = function determineMessage(post) {
   return "UNSUPPORTED";
 };
 
-var isUserState = function isUserState(state) {
+var isConvState = function isConvState(state) {
   if (state["set"] && state["progress"]) return true;else return false;
 };
 
 exports.default = {
-  determineMessage: determineMessage, isUserState: isUserState
+  determineMessage: determineMessage, isConvState: isConvState
 };

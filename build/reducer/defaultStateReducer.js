@@ -4,17 +4,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var setMapGenerator = function setMapGenerator(sets) {
-  return function (userState, message) {
-    var setFunc = sets[userState.set];
-    if (!userState.set) setFunc = sets["welcome"];
-    return setFunc ? setFunc(userState, message) : Object.assign({}, userState, { payload: { error: "UNKNOWN_SET" } });
+  return function (convState, message) {
+    var setFunc = sets[convState.set];
+    if (!convState.set) setFunc = sets["welcome"];
+    return setFunc ? setFunc(convState, message) : Object.assign({}, convState, { payload: { error: "UNKNOWN_SET" } });
   };
 };
 
 var messageGenerator = function messageGenerator(messageSets) {
-  return function (userState) {
-    var setFunc = messageSets[userState.set];
-    return setFunc ? setFunc(userState) : null;
+  return function (convState) {
+    var setFunc = messageSets[convState.set];
+    return setFunc ? setFunc(convState) : null;
   };
 };
 

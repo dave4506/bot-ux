@@ -1,11 +1,14 @@
+import helper from '../helper'
+const {determineMessage} = helper
 const mainFlow = (db,setMap,messageGenerator)=>{
   return (message,sender)=>{
-    return db.getUserState(sender).then((userState)=>{
-      return setMap(userState,message)
-    }).then((newUserState)=>{
-      return db.updateUserState(sender,newUserState).then(()=>{return newUserState})
-    }).then((newUserState)=>{
-      return messageGenerator(newUserState)
+    return db.getConvState(sender).then((convState)=>{
+      message.msg_type = determineMessage(message);
+      return setMap(convState,message)
+    }).then((responsedConvState)=>{
+      return messageGenerator(responsedConvState)
+    }).then(({message,postMsgState})=>{
+      return db.updateConvState(sender,postMsgState).then(()=>{return message})
     }).then((message)=>{
       return {
         sender,

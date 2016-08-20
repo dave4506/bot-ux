@@ -17,7 +17,7 @@ const determineMessage = (post) => {
   return "UNSUPPORTED"
 }
 
-const isUserState = (state) => {
+const isConvState = (state) => {
   if(state["set"] && state["progress"])
     return true
   else
@@ -25,5 +25,5 @@ const isUserState = (state) => {
 }
 
 export default {
-  determineMessage,isUserState
+  determineMessage,isConvState
 }

@@ -1,16 +1,16 @@
  const setMapGenerator = (sets) => {
-   return (userState,message) => {
-     var setFunc = sets[userState.set]
-     if(!userState.set)
+   return (convState,message) => {
+     var setFunc = sets[convState.set]
+     if(!convState.set)
         setFunc = sets["welcome"]
-     return (setFunc ? setFunc(userState,message):Object.assign({},userState,{payload:{error:"UNKNOWN_SET"}}))
+     return (setFunc ? setFunc(convState,message):Object.assign({},convState,{payload:{error:"UNKNOWN_SET"}}))
    }
  }
 
  const messageGenerator = (messageSets) => {
-   return (userState) => {
-     const setFunc = messageSets[userState.set]
-     return (setFunc ? setFunc(userState):null)
+   return (convState) => {
+     const setFunc = messageSets[convState.set]
+     return (setFunc ? setFunc(convState):null)
    }
  }
 

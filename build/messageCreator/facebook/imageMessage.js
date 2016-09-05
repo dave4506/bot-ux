@@ -24,7 +24,7 @@ var ImageMessage = function (_MediaMessage) {
   function ImageMessage(url) {
     _classCallCheck(this, ImageMessage);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(ImageMessage).call(this, "image", url));
+    return _possibleConstructorReturn(this, (ImageMessage.__proto__ || Object.getPrototypeOf(ImageMessage)).call(this, "image", url));
   }
 
   _createClass(ImageMessage, [{

@@ -26,7 +26,7 @@ var PostBackButton = function (_Button) {
   function PostBackButton(title, payload) {
     _classCallCheck(this, PostBackButton);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PostBackButton).call(this, "postback", title));
+    var _this = _possibleConstructorReturn(this, (PostBackButton.__proto__ || Object.getPrototypeOf(PostBackButton)).call(this, "postback", title));
 
     _this.payload = JSON.stringify(payload);
     return _this;
@@ -35,7 +35,7 @@ var PostBackButton = function (_Button) {
   _createClass(PostBackButton, [{
     key: "messageify",
     value: function messageify() {
-      var button = _get(Object.getPrototypeOf(PostBackButton.prototype), "messageify", this).call(this);
+      var button = _get(PostBackButton.prototype.__proto__ || Object.getPrototypeOf(PostBackButton.prototype), "messageify", this).call(this);
       button.payload = this.payload;
       return button;
     }

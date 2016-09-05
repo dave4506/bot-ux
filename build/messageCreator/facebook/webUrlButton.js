@@ -26,7 +26,7 @@ var WebUrlButton = function (_Button) {
   function WebUrlButton(title, url) {
     _classCallCheck(this, WebUrlButton);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(WebUrlButton).call(this, "web_url", title));
+    var _this = _possibleConstructorReturn(this, (WebUrlButton.__proto__ || Object.getPrototypeOf(WebUrlButton)).call(this, "web_url", title));
 
     _this.url = url;
     return _this;
@@ -35,7 +35,7 @@ var WebUrlButton = function (_Button) {
   _createClass(WebUrlButton, [{
     key: "messageify",
     value: function messageify() {
-      var button = _get(Object.getPrototypeOf(WebUrlButton.prototype), "messageify", this).call(this);
+      var button = _get(WebUrlButton.prototype.__proto__ || Object.getPrototypeOf(WebUrlButton.prototype), "messageify", this).call(this);
       button.url = this.url;
       return button;
     }

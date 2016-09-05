@@ -24,7 +24,7 @@ var FileMessage = function (_MediaMessage) {
   function FileMessage(url) {
     _classCallCheck(this, FileMessage);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(FileMessage).call(this, "file", url));
+    return _possibleConstructorReturn(this, (FileMessage.__proto__ || Object.getPrototypeOf(FileMessage)).call(this, "file", url));
   }
 
   _createClass(FileMessage, [{

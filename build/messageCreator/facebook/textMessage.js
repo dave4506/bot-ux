@@ -26,7 +26,7 @@ var TextMessage = function (_Message) {
   function TextMessage(text) {
     _classCallCheck(this, TextMessage);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TextMessage).call(this));
+    var _this = _possibleConstructorReturn(this, (TextMessage.__proto__ || Object.getPrototypeOf(TextMessage)).call(this));
 
     _this.text = text;
     return _this;
@@ -35,7 +35,7 @@ var TextMessage = function (_Message) {
   _createClass(TextMessage, [{
     key: 'messageify',
     value: function messageify() {
-      return Object.assign({}, _get(Object.getPrototypeOf(TextMessage.prototype), 'messageify', this).call(this), { text: this.text });
+      return Object.assign({}, _get(TextMessage.prototype.__proto__ || Object.getPrototypeOf(TextMessage.prototype), 'messageify', this).call(this), { text: this.text });
     }
   }, {
     key: 'changeText',

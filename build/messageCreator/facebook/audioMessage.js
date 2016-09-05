@@ -24,7 +24,7 @@ var AudioMessage = function (_MediaMessage) {
   function AudioMessage(url) {
     _classCallCheck(this, AudioMessage);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(AudioMessage).call(this, "audio", url));
+    return _possibleConstructorReturn(this, (AudioMessage.__proto__ || Object.getPrototypeOf(AudioMessage)).call(this, "audio", url));
   }
 
   _createClass(AudioMessage, [{

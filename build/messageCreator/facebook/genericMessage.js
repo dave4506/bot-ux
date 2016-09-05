@@ -26,7 +26,7 @@ var GenericMessage = function (_Message) {
   function GenericMessage(elements) {
     _classCallCheck(this, GenericMessage);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GenericMessage).call(this));
+    var _this = _possibleConstructorReturn(this, (GenericMessage.__proto__ || Object.getPrototypeOf(GenericMessage)).call(this));
 
     _this.elements = elements;
     return _this;
@@ -39,7 +39,7 @@ var GenericMessage = function (_Message) {
       this.elements.map(function (e) {
         primedElements.push(e.messageify());
       });
-      return Object.assign({}, _get(Object.getPrototypeOf(GenericMessage.prototype), "messageify", this).call(this), {
+      return Object.assign({}, _get(GenericMessage.prototype.__proto__ || Object.getPrototypeOf(GenericMessage.prototype), "messageify", this).call(this), {
         "attachment": {
           "type": "template",
           "payload": {

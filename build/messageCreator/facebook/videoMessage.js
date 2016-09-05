@@ -24,7 +24,7 @@ var VideoMessage = function (_MediaMessage) {
   function VideoMessage(url) {
     _classCallCheck(this, VideoMessage);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(VideoMessage).call(this, "video", url));
+    return _possibleConstructorReturn(this, (VideoMessage.__proto__ || Object.getPrototypeOf(VideoMessage)).call(this, "video", url));
   }
 
   _createClass(VideoMessage, [{

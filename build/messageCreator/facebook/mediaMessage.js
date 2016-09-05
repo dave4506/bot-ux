@@ -26,7 +26,7 @@ var MediaMessage = function (_Message) {
   function MediaMessage(type, url) {
     _classCallCheck(this, MediaMessage);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(MediaMessage).call(this));
+    var _this = _possibleConstructorReturn(this, (MediaMessage.__proto__ || Object.getPrototypeOf(MediaMessage)).call(this));
 
     _this.type = type;
     _this.url = url;
@@ -36,7 +36,7 @@ var MediaMessage = function (_Message) {
   _createClass(MediaMessage, [{
     key: "messageify",
     value: function messageify() {
-      return Object.assign({}, _get(Object.getPrototypeOf(MediaMessage.prototype), "messageify", this).call(this), {
+      return Object.assign({}, _get(MediaMessage.prototype.__proto__ || Object.getPrototypeOf(MediaMessage.prototype), "messageify", this).call(this), {
         attachment: {
           "type": this.type,
           payload: {

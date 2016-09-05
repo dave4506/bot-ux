@@ -26,7 +26,7 @@ var ButtonMessage = function (_Message) {
   function ButtonMessage(text, buttons) {
     _classCallCheck(this, ButtonMessage);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ButtonMessage).call(this));
+    var _this = _possibleConstructorReturn(this, (ButtonMessage.__proto__ || Object.getPrototypeOf(ButtonMessage)).call(this));
 
     _this.text = text;
     _this.buttons = buttons || [];
@@ -55,7 +55,7 @@ var ButtonMessage = function (_Message) {
       this.buttons.map(function (b) {
         primedButtons.push(b.messageify());
       });
-      return Object.assign({}, _get(Object.getPrototypeOf(ButtonMessage.prototype), "messageify", this).call(this), {
+      return Object.assign({}, _get(ButtonMessage.prototype.__proto__ || Object.getPrototypeOf(ButtonMessage.prototype), "messageify", this).call(this), {
         attachment: {
           "type": "template",
           "payload": {

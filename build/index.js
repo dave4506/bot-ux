@@ -6,28 +6,72 @@ Object.defineProperty(exports, "__esModule", {
 
 var _helper = require('./helper');
 
-var _helper2 = _interopRequireDefault(_helper);
+Object.keys(_helper).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _helper[key];
+    }
+  });
+});
 
-var _facebook = require('./messageCreator/facebook');
+var _index = require('./messageCreator/facebook/index.js');
 
-var _facebook2 = _interopRequireDefault(_facebook);
+Object.keys(_index).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _index[key];
+    }
+  });
+});
 
-var _index = require('./webhook/facebook/index.js');
+var _index2 = require('./webhook/facebook/index.js');
 
-var _index2 = _interopRequireDefault(_index);
+Object.keys(_index2).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _index2[key];
+    }
+  });
+});
 
 var _actions = require('./webhook/facebook/actions');
 
-var _actions2 = _interopRequireDefault(_actions);
+Object.keys(_actions).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _actions[key];
+    }
+  });
+});
 
 var _mainflow = require('./reducer/mainflow');
 
-var _mainflow2 = _interopRequireDefault(_mainflow);
+Object.keys(_mainflow).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _mainflow[key];
+    }
+  });
+});
 
 var _defaultStateReducer = require('./reducer/defaultStateReducer');
 
-var _defaultStateReducer2 = _interopRequireDefault(_defaultStateReducer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = { helper: _helper2.default, messageCreator: _facebook2.default, webhook: _index2.default, actions: _actions2.default, mainflow: _mainflow2.default, defaultStateReducer: _defaultStateReducer2.default };
+Object.keys(_defaultStateReducer).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _defaultStateReducer[key];
+    }
+  });
+});

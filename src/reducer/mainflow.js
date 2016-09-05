@@ -4,7 +4,7 @@ const mainFlow = (db,setMap,messageGenerator)=>{
   return (message,sender)=>{
     return db.getConvState(sender).then((convState)=>{
       message.msg_type = determineMessage(message);
-      return setMap(convState,message)
+      return setMap(Object.assign({uid:sender},convState),message)
     }).then((responsedConvState)=>{
       return messageGenerator(responsedConvState)
     }).then(({message,postMsgState})=>{

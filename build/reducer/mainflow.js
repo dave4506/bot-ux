@@ -16,7 +16,7 @@ var mainFlow = function mainFlow(db, setMap, messageGenerator) {
   return function (message, sender) {
     return db.getConvState(sender).then(function (convState) {
       message.msg_type = determineMessage(message);
-      return setMap(convState, message);
+      return setMap(Object.assign({ uid: sender }, convState), message);
     }).then(function (responsedConvState) {
       return messageGenerator(responsedConvState);
     }).then(function (_ref) {

@@ -32,7 +32,7 @@ var _genericMessage = require('./genericMessage');
 
 var _genericMessage2 = _interopRequireDefault(_genericMessage);
 
-var _element = require('element');
+var _element = require('./element');
 
 var _element2 = _interopRequireDefault(_element);
 
